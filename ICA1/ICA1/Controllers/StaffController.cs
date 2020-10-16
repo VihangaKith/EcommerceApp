@@ -16,5 +16,16 @@ namespace ICA1.Controllers
             List<Staff> AllStaff = staffContext.Staffs.ToList();
             return View(AllStaff);
         }
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Staff staff)
+        {
+            staffContext.Staffs.Add(staff);
+            staffContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
