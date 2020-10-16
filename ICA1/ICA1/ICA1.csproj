@@ -176,6 +176,7 @@
     <Content Include="Views\Branch\Edit.cshtml" />
     <Content Include="Views\Branch\Delete.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
+    <Content Include="Views\Staff\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
