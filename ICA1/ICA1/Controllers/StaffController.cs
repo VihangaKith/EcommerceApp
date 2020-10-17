@@ -18,11 +18,14 @@ namespace ICA1.Controllers
         }
         public ActionResult Create()
         {
+            ViewBag.staffDetails = staffContext.Staffs;
+            //ViewBag.staffDetails = new SelectList(staffContext.Staffs, "StaffNo", "RefBranchNo");
             return View();
         }
         [HttpPost]
         public ActionResult Create(Staff staff)
         {
+            ViewBag.staffDetails = staffContext.Staffs;
             staffContext.Staffs.Add(staff);
             staffContext.SaveChanges();
             return RedirectToAction("Index");
