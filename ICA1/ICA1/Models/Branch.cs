@@ -16,8 +16,10 @@ namespace ICA1.Models
         public String Street { get; set; }
         public String City { get; set; }
         public String PostCode { get; set; }
-        public List<Staff> staffs { get; set; }
-        
+
+        public virtual List<Staff> staffs { get; set; }
+        public virtual List<Rent> rents { get; set; }
+
 
     }
 }

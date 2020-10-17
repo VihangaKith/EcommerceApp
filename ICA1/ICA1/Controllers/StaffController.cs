@@ -27,10 +27,11 @@ namespace ICA1.Controllers
             staffContext.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult Details(String Id)
+        public ActionResult Details(String id)
         {
-            Staff staff = staffContext.Staffs.SingleOrDefault(x=>x.StaffNo==Id);
-            return View();
+            Staff staff = staffContext.Staffs.SingleOrDefault(x=>x.StaffNo==id);
+            return View(staff);
         }
+
     }
 }

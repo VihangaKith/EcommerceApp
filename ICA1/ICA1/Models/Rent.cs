@@ -24,9 +24,9 @@ namespace ICA1.Models
         [ForeignKey("Branch")]
         public String RefBranchNo { get; set; }
         public int Rents { get; set; }
-        public Owner Owner { get; set; }
-        public Staff Staff { get; set; }
-        public Branch Branch { get; set; }
+        public virtual Owner Owner { get; set; }
+        public virtual Staff Staff { get; set; }
+        public virtual Branch Branch { get; set; }
        
 
     }

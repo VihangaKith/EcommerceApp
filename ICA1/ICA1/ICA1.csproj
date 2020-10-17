@@ -147,9 +147,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010150611368_ica1.cs" />
-    <Compile Include="Migrations\202010150611368_ica1.designer.cs">
-      <DependentUpon>202010150611368_ica1.cs</DependentUpon>
+    <Compile Include="Migrations\202010170953111_ICA.cs" />
+    <Compile Include="Migrations\202010170953111_ICA.Designer.cs">
+      <DependentUpon>202010170953111_ICA.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -176,6 +176,7 @@
     <Content Include="Views\Branch\Edit.cshtml" />
     <Content Include="Views\Branch\Delete.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
+    <Content Include="Views\Staff\Details.cshtml" />
     <Content Include="Views\Staff\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -189,8 +190,8 @@
     <Folder Include="Views\Rent\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010150611368_ica1.resx">
-      <DependentUpon>202010150611368_ica1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010170953111_ICA.resx">
+      <DependentUpon>202010170953111_ICA.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

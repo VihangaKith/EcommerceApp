@@ -16,11 +16,13 @@ namespace ICA1.Models
         public String Fname { get; set; }
         public String Lname { get; set; }
         public String Position { get; set; }
-        [Column(TypeName ="Date")]
+        [DataType(DataType.Date)]
+        [Column(TypeName ="date")]
         public DateTime DateofBirth { get; set; }
         public int Salary { get; set; }
         [ForeignKey("Branch")]
         public String RefBranchNo { get; set; }
-        public Branch Branch { get; set; }
+        public virtual Branch Branch { get; set; }
+        public virtual List<Rent> rents { get; set; }
     }
 }
