@@ -55,6 +55,19 @@ namespace ICA1.Controllers
             staffContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Delete(String Id)
+        {
+            Staff staff = staffContext.Staffs.SingleOrDefault(x => x.StaffNo == Id);
+            return View(staff);
+        }
+        [HttpPost,ActionName("Delete")]
+        public ActionResult Deletetaff(String Id)
+        {
+            Staff staff = staffContext.Staffs.SingleOrDefault(x => x.StaffNo == Id);
+            staffContext.Staffs.Remove(staff);
+            staffContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }
