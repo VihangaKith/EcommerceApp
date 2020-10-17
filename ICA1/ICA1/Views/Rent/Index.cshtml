@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ICA1.Models.Rent>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Branch.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rents)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Branch.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staff.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rents)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PropertyNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PropertyNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PropertyNo })
+        </td>
+    </tr>
+}
+
+</table>

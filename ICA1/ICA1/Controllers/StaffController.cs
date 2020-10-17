@@ -18,7 +18,7 @@ namespace ICA1.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.branchDetails = staffContext.Branches;
+                
             //ViewBag.staffDetails = new SelectList(staffContext.Staffs, "StaffNo", "RefBranchNo");
             return View();
         }
