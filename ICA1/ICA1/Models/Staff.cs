@@ -17,8 +17,9 @@ namespace ICA1.Models
         public String Lname { get; set; }
         public String Position { get; set; }
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Column(TypeName ="date")]
-        public DateTime DateofBirth { get; set; }
+        public DateTime? DateofBirth { get; set; }
         public int Salary { get; set; }
         [ForeignKey("Branch")]
         public String RefBranchNo { get; set; }

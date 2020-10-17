@@ -18,14 +18,14 @@ namespace ICA1.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.staffDetails = staffContext.Staffs;
+            ViewBag.branchDetails = staffContext.Branches;
             //ViewBag.staffDetails = new SelectList(staffContext.Staffs, "StaffNo", "RefBranchNo");
             return View();
         }
         [HttpPost]
         public ActionResult Create(Staff staff)
         {
-            ViewBag.staffDetails = staffContext.Staffs;
+            ViewBag.branchDetails = staffContext.Branches;
             staffContext.Staffs.Add(staff);
             staffContext.SaveChanges();
             return RedirectToAction("Index");
@@ -34,6 +34,26 @@ namespace ICA1.Controllers
         {
             Staff staff = staffContext.Staffs.SingleOrDefault(x=>x.StaffNo==id);
             return View(staff);
+        }
+        public ActionResult Edit(String Id)
+        {
+            ViewBag.branchDetails = staffContext.Branches;
+            Staff staff = staffContext.Staffs.SingleOrDefault(x => x.StaffNo == Id);
+            return View(staff);
+        }
+        [HttpPost]
+        public ActionResult Edit(String Id,Staff updatedStaff)
+        {
+            ViewBag.branchDetails = staffContext.Branches;
+            Staff staff = staffContext.Staffs.SingleOrDefault(x => x.StaffNo == Id);
+            staff.StaffNo = updatedStaff.StaffNo;
+            staff.Fname = updatedStaff.Fname;
+            staff.Lname = updatedStaff.Lname;
+            staff.Position = updatedStaff.Position;
+            staff.DateofBirth = updatedStaff.DateofBirth;
+            staff.Salary = updatedStaff.Salary;
+            staffContext.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
