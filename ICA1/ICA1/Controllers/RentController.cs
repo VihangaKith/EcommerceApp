@@ -69,7 +69,7 @@ namespace ICA1.Controllers
             Rent rent = rentConext.Rents.SingleOrDefault(x => x.PropertyNo == Id);
             return View(rent);
         }
-        [HttpPost,ActionName("Index")]
+        [HttpPost,ActionName("Delete")]
         public ActionResult DeleteRent(String Id)
         { 
             Rent rent = rentConext.Rents.SingleOrDefault(x => x.PropertyNo == Id);

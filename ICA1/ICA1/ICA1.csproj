@@ -183,21 +183,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Owner\Create.cshtml" />
-    <Content Include="Views\Owner\Index.cshtml" />
-    <Content Include="Views\Owner\Details.cshtml" />
-    <Content Include="Views\Owner\Edit.cshtml" />
-    <Content Include="Views\Owner\Delete.cshtml" />
-    <Content Include="Views\Branch\Index.cshtml" />
-    <Content Include="Views\Branch\Create.cshtml" />
-    <Content Include="Views\Branch\Details.cshtml" />
-    <Content Include="Views\Branch\Edit.cshtml" />
-    <Content Include="Views\Branch\Delete.cshtml" />
-    <Content Include="Views\Staff\Index.cshtml" />
-    <Content Include="Views\Staff\Details.cshtml" />
-    <Content Include="Views\Staff\Create.cshtml" />
-    <Content Include="Views\Staff\Edit.cshtml" />
-    <Content Include="Views\Staff\Delete.cshtml" />
     <Content Include="Views\Rent\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -206,6 +191,21 @@
     <Content Include="Views\Rent\Details.cshtml" />
     <Content Include="Views\Rent\Edit.cshtml" />
     <Content Include="Views\Rent\Delete.cshtml" />
+    <Content Include="Views\Staff\Index.cshtml" />
+    <Content Include="Views\Staff\Create.cshtml" />
+    <Content Include="Views\Staff\Details.cshtml" />
+    <Content Include="Views\Staff\Edit.cshtml" />
+    <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Owner\Index.cshtml" />
+    <Content Include="Views\Owner\Create.cshtml" />
+    <Content Include="Views\Owner\Details.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
+    <Content Include="Views\Branch\Index.cshtml" />
+    <Content Include="Views\Branch\Create.cshtml" />
+    <Content Include="Views\Branch\Details.cshtml" />
+    <Content Include="Views\Branch\Edit.cshtml" />
+    <Content Include="Views\Branch\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
