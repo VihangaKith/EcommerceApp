@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ICA1.Models.Owner>
+@using ICA1.Models;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h5>Click here to see more details</h5>
+
+<div style="background-color:aliceblue;width:15%; ">
+  @Html.ActionLink("Owner", "Index", "Owner/Index")
+</div>
+<br/>
+<div style="background-color:aliceblue;width:15%;">
+    @Html.ActionLink("Branch", "Index", "Branch/Index")
+</div>
+<br />
+<div style="background-color:aliceblue;width:15%;">
+    @Html.ActionLink("Staff", "Index", "Staff/Index")
+</div>
+<br />
+<div style="background-color:aliceblue;width:15%;">
+    @Html.ActionLink("Rent", "Index", "Rent/Index")
+
+</div>
+
+
