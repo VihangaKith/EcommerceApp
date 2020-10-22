@@ -11,27 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Branch.Street)
+            @Html.DisplayNameFor(model => model.PropertyNo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Branch.Street)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Owner.Fname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Owner.Fname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Staff.Fname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Staff.Fname)
+            @Html.DisplayFor(model => model.PropertyNo)
         </dd>
 
         <dt>
@@ -65,6 +49,30 @@
         <dd>
             @Html.DisplayFor(model => model.Rooms)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner.OwnerNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner.OwnerNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Staff.StaffNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Staff.StaffNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch.BranchNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch.BranchNo)
+        </dd>
+
 
         <dt>
             @Html.DisplayNameFor(model => model.Rents)
