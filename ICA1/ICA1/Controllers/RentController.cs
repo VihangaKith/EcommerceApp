@@ -59,6 +59,7 @@ namespace ICA1.Controllers
             Rent rent = rentConext.Rents.SingleOrDefault(x => x.PropertyNo == Id);
             return View(rent);
         }
+      
         public ActionResult Edit(String Id)
         {
 
