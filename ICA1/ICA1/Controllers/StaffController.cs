@@ -14,7 +14,28 @@ namespace ICA1.Controllers
         public ActionResult Index()
         {
             List<Staff> AllStaff = staffContext.Staffs.ToList();
+            List<Staff> distictPosition = staffContext.Staffs.GroupBy(x => x.Position).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.Position = new SelectList(distictPosition, "Position", "Position");
             return View(AllStaff);
+        }
+        [HttpPost]
+        public ActionResult Index(FormCollection form)
+        {
+            List<Staff> distictPosition = staffContext.Staffs.GroupBy(x => x.Position).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.Position = new SelectList(distictPosition, "Position", "Position");
+
+            String pos = form["PosDropDown"]?.ToString();
+
+            if (pos == null)
+            {
+                List<Staff> filterStaff = staffContext.Staffs.ToList();
+                return View(filterStaff);
+            }
+            else
+            {
+                List<Staff> filterStaff = staffContext.Staffs.Where(x => x.Position == pos).ToList();
+                return View(filterStaff);
+            }
         }
         public ActionResult Create()
         {

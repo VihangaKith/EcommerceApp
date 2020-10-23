@@ -163,6 +163,7 @@
     <Compile Include="Controllers\OwnerController.cs" />
     <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
+    <Compile Include="Controllers\StaffPositionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,6 +209,7 @@
     <Content Include="Views\Branch\Edit.cshtml" />
     <Content Include="Views\Branch\Delete.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\StaffPosition\StaffByPosition.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

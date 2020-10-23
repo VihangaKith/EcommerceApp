@@ -1,29 +1,18 @@
 ﻿@model IEnumerable<ICA1.Models.Staff>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "StaffByPosition";
 }
 
-<h2>Staff</h2>
+<h2>StaffByPosition</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-<div class="align-content-end">
-
-    @using (Html.BeginForm("Index", "Staff"))
-    {
-        @Html.DropDownList("PosDropDown", ViewBag.Position as SelectList, "-Select Position-")
-        <input type="submit" value="Search">
-    }
-    @Html.ActionLink("View All", "Index")
-</div>
-
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.StaffNo)
+            @Html.DisplayNameFor(model => model.Branch.Street)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Fname)
@@ -46,7 +35,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.StaffNo)
+            @Html.DisplayFor(modelItem => item.Branch.Street)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Fname)
@@ -72,7 +61,3 @@
 }
 
 </table>
-<div class="form-actions no-color">
-
-    | @Html.ActionLink("Back to Home", "Index", "Home/Index")
-</div>
