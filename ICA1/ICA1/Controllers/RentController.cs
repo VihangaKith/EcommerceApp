@@ -14,7 +14,28 @@ namespace ICA1.Controllers
         public ActionResult Index()
         {
             List<Rent> AllRent = rentConext.Rents.ToList();
+            List<Rent> distinctCity = rentConext.Rents.GroupBy(x => x.City).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.City = new SelectList(distinctCity, "City", "City");
             return View(AllRent);
+        }
+        [HttpPost]
+        public ActionResult Index(FormCollection form)
+        {
+            List<Rent> distictCity = rentConext.Rents.GroupBy(x => x.City).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.City = new SelectList(distictCity, "City", "City");
+
+            String city = form["CityDropDown"]?.ToString();
+
+            if (city == null)
+            {
+                List<Rent> filterRent = rentConext.Rents.ToList();
+                return View(filterRent);
+            }
+            else
+            {
+                List<Rent> filterRent = rentConext.Rents.Where(x => x.City == city).ToList();
+                return View(filterRent);
+            }
         }
         public ActionResult Create()
         {

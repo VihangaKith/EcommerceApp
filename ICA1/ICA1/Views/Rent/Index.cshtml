@@ -7,6 +7,15 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div class="align-content-end">
+
+    @using (Html.BeginForm("Index", "Rent"))
+    {
+        @Html.DropDownList("CityDropDown", ViewBag.City as SelectList, "-Select City-")
+        <input type="submit" value="Search">
+    }
+    @Html.ActionLink("View All", "Index")
+</div>
 <table class="table">
     <tr>
         <th>
