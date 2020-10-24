@@ -61,7 +61,18 @@ namespace ICA1.Controllers
             branchContext.SaveChanges();
             return RedirectToAction("Index");
         }
-        
 
+
+        public ActionResult Branch()
+        {
+            List<Branch> branch = branchContext.Branches.ToList();
+            return View(branch);
+        }
+        public ActionResult BuildingBranch(String id)
+        {
+            var rent = branchContext.Rents.Where(x => x.RefBranchNo == id).ToList().Count();
+            ViewBag.count = rent;
+            return View();
+        }
     }
 }

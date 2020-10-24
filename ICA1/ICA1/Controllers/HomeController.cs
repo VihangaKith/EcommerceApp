@@ -15,10 +15,14 @@ namespace ICA1.Controllers
         {
             return View();
         }
-        public ActionResult BuildingDetails(String id)
+        public ActionResult Details(String Id)
         {
-            Rent rent = HomeContext.Rents
-                .SingleOrDefault(x => x.PropertyNo == id);
+            Rent rent = HomeContext.Rents.SingleOrDefault(x => x.PropertyNo == Id);
+            return View(rent);
+        }
+        public ActionResult BuildingBranch(String id)
+        {
+            List<Rent> rent = HomeContext.Rents.Where(x => x.PropertyNo == id).ToList();
             return View(rent);
         }
 

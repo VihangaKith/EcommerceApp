@@ -1,0 +1,17 @@
+﻿@model List<ICA1.Models.Branch>
+    @using ICA1.Models
+
+@{
+    ViewBag.Title = "Branch";
+}
+
+<h2>Branch</h2>
+<div>
+    <h1>Branch Names</h1>
+    @foreach (Branch branch in Model)
+    {
+        @Html.ActionLink(branch.Street, "BuildingBranch",new { id = branch.BranchNo })
+        <br />
+    }
+</div>
+

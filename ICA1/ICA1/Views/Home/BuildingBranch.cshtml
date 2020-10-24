@@ -1,0 +1,18 @@
+﻿@model List<ICA1.Models.Rent>
+    @using ICA1.Models
+
+@{
+    ViewBag.Title = "BuildingBranch";
+}
+
+<h2>BuildingBranch</h2>
+
+<div>
+   
+    @foreach (Rent rent in Model)
+    {
+        @Html.ActionLink(rent.Ptype, "Details", new { @id = rent.PropertyNo })
+        <br />
+    }
+
+</div>

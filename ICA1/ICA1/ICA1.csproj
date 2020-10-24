@@ -208,7 +208,10 @@
     <Content Include="Views\Branch\Edit.cshtml" />
     <Content Include="Views\Branch\Delete.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\BuildingDetails.cshtml" />
+    <Content Include="Views\Branch\Branch.cshtml" />
+    <Content Include="Views\Home\BuildingBranch.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Branch\BuildingBranch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
