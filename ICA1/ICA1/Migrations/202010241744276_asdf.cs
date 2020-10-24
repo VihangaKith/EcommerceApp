@@ -3,7 +3,7 @@ namespace ICA1.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class IC : DbMigration
+    public partial class asdf : DbMigration
     {
         public override void Up()
         {

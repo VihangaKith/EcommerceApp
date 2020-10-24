@@ -7,13 +7,13 @@ namespace ICA1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class IC : IMigrationMetadata
+    public sealed partial class asdf : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(IC));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(asdf));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010171834427_IC"; }
+            get { return "202010241744276_asdf"; }
         }
         
         string IMigrationMetadata.Source
