@@ -5,13 +5,24 @@
     ViewBag.Title = "Branch";
 }
 
-<h2>Branch</h2>
+
 <div>
     <h1>Branch Names</h1>
+    <div>
+
+    </div>
+    <br />
     @foreach (Branch branch in Model)
     {
         @Html.ActionLink(branch.Street, "BuildingBranch",new { id = branch.BranchNo })
         <br />
     }
 </div>
+<div>
+
+</div>
+<br />
+<p>
+   |@Html.ActionLink("Back to Home", "Index", "Home/Index")
+</p>
 
